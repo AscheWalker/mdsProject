@@ -1,7 +1,6 @@
 from graphics import *
 from button import Button
 from buscar import *
-from msn import getmsg
 
 
 
@@ -18,17 +17,6 @@ def seeDogs(userId):
 
 def addDogs():
     print("addDog placeholder")
-
-def seeMe(userId):
-    print("seeMe placeholder")
-    lin = GraphWin("Tus mensajes", 400, 200)
-    lin.setCoords(0,0,10,10)
-    lin.setBackground("white")
-    msgs = getmsg(userId)
-    va = 7
-    for msg in msgs:
-        Text(Point(5, va), msg.msg).draw(lin)
-        va = va - 1
 
 
 
@@ -83,9 +71,6 @@ def login():
                 addDogButt = Button(win, Point(5, 5), 4, 1, "Agregar perro")
                 #addDogButt.activate()
 
-                #button to see messages
-                seeMeButt = Button(win, Point(5, 3), 4, 1, "Ver mensajes")
-                seeMeButt.activate()
 
                 mc = win.getMouse()
 
@@ -94,8 +79,6 @@ def login():
                         seeDogs(user.id)
                     elif addDogButt.clicked(mc):
                         addDogs()
-                    elif seeMeButt.clicked(mc):
-                        seeMe(user.id)
                     mc = win.getMouse()
                 break
                 
