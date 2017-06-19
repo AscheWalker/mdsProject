@@ -1,5 +1,8 @@
 # button.py
-from graphics import *
+if __name__ == '__main__':
+    from graphicskyo import *
+else:
+    from .graphicskyo import *
 
 
 class Button:
