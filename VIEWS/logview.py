@@ -6,20 +6,7 @@ else:
     from .graphicskyo import *
     from .button import Button
     from .base import wind
-
-
-def seeDogs(userId):
-    print("seeDogButt placeholder")
-    mac = GraphWin("Tus perros", 400, 200)
-    mac.setCoords(0,0,10,10)
-    mac.setBackground("white")
-    dogs = dogbyuser(userId)
-    va = 7
-    for dog in dogs:
-        Text(Point(5, va), dog.name).draw(mac)
-        va = va - 1
-
-
+from tkinter import messagebox
 
 class loginscreen(wind):
 
@@ -32,10 +19,6 @@ class loginscreen(wind):
         self.pwdField.draw(self.win)
         self.pwdText = Text(Point(7, 5), "Ingrese su clave")
         self.pwdText.draw(self.win)
-
-        self.doneText = Text(Point(5, 9), "usuario o clave incorrecto")
-        self.doneText.setSize(20)
-        self.doneText.setTextColor('red')
 
         self.loginButt = Button(self.win, Point(2, 1), 1.3, 1, "Login")
         self.loginButt.activate()
@@ -50,10 +33,10 @@ class loginscreen(wind):
                     
 
             self.mc = self.win.getMouse()
-
+        
+        return "first"
 
 
     def error(self):
-        self.doneText.undraw()
-        self.doneText.draw(self.win)
+        messagebox.showinfo("Error", "usuario o clave incorrecto")
             
