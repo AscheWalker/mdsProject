@@ -1,1 +1,1 @@
-__all__ = ["base", "firstview", "logview", "userview", "dogsview"]
+__all__ = ["firstview", "logview", "userview", "dogsview"]
