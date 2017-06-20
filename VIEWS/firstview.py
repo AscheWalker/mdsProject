@@ -18,7 +18,7 @@ class firstscreen(wind):
 
         #button to create user
         self.butCreate = Button(self.win, Point(5, 3), 4, 1, "Crear usuario")
-        self.butCreate.activate()
+        #self.butCreate.activate()
         
         
 
