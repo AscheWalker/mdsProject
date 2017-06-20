@@ -25,6 +25,6 @@ class userscreen(wind):
                 return ["dogscreen", "nada"]
             elif self.addDogButt.clicked(self.mc):
                 return "addDogs"
-            mc = win.getMouse()
+            self.mc = self.win.getMouse()
 
         return "salir"

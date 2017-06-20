@@ -40,4 +40,5 @@ while estado:
                 current = logview.loginscreen("Vuelva a intentar")
         if order[0] == "dogscreen":
             dogs = model.dogbyuser(user.id)
+            current.salir()
             current = dogsview.dogscreen("Tus perros", dogs)
